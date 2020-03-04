@@ -16,7 +16,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: d465b412-69a2-4578-9aa0-0f08638c4c65
-dateModified: 1583324965
+dateModified: 1583325035
 email:
   fromEmail: marco.senkpiel@gmail.com
   fromName: 'Craft Demo'
@@ -193,6 +193,13 @@ imageTransforms:
     quality: null
     width: 800
 routes:
+  8cb3e1fe-d442-4adc-861b-e94b7d09c511:
+    siteUid: null
+    sortOrder: 2
+    template: playlist/index
+    uriParts:
+      - playlists
+    uriPattern: playlists
   8d578477-4dee-4687-87a0-ab76effd88ad:
     siteUid: null
     sortOrder: 1
