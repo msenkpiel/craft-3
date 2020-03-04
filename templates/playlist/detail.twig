@@ -26,6 +26,9 @@
         {% endif %}
 
         <p>{{ playlist.text|nl2br }}</p>
+        {% autoescape %}
+            {{ playlist.embedCode|raw }}
+        {% endautoescape %}
     {% else %}
         Not Found
     {% endif %}
