@@ -1,0 +1,32 @@
+{% extends "shared/base.twig" %}
+
+{# Get the requested playlist slug from the URL #}
+{% set requestedSlug = craft.app.request.getSegment(2) %}
+
+{# Fetch the playlist with that slug #}
+{% set playlist = craft.entries().slug(requestedSlug|literal).one() %}
+
+
+{% block title %}
+    {% if playlist %}
+        {{ playlist.title }}
+    {% else %}
+        Not Found
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {% if playlist %}
+        <small>{{ playlist.title }}</small>
+        <h1>{{ playlist.headline }}</h1>
+
+        {% if playlist.keyvisual|length %}
+            {% set image = playlist.keyvisual[0] %}
+            <img class="thumb" src="{{ image.getUrl('cropCenter') }}">
+        {% endif %}
+
+        <p>{{ playlist.text|nl2br }}</p>
+    {% else %}
+        Not Found
+    {% endif %}
+{% endblock %}

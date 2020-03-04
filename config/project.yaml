@@ -16,7 +16,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: d465b412-69a2-4578-9aa0-0f08638c4c65
-dateModified: 1583233088
+dateModified: 1583324965
 email:
   fromEmail: marco.senkpiel@gmail.com
   fromName: 'Craft Demo'
@@ -276,6 +276,39 @@ sections:
         hasUrls: false
         template: null
         uriFormat: ''
+    type: channel
+  1b0dfbdc-167e-4b3d-aaf7-2ddf77badeeb:
+    enableVersioning: false
+    entryTypes:
+      daecc763-ff5d-420e-9a6f-fe4c5debd32a:
+        fieldLayouts:
+          2391ed7e-b6df-46c5-8b6b-ceb10f3d2df3:
+            tabs:
+              -
+                fields:
+                  4b83372e-e561-41cf-9bf2-68abf64c1403:
+                    required: false
+                    sortOrder: 2
+                  c90d10bd-eec8-4cba-bc75-2d4516fb4ed2:
+                    required: false
+                    sortOrder: 1
+                name: 'Static Pages'
+                sortOrder: 1
+        handle: playlist
+        hasTitleField: true
+        name: Playlist
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: playlist
+    name: Playlist
+    propagationMethod: all
+    siteSettings:
+      e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
+        enabledByDefault: true
+        hasUrls: true
+        template: playlist\detail
+        uriFormat: 'playlist/{slug}'
     type: channel
   c1a11bc2-2d62-4d48-b96a-521b2cf0f438:
     enableVersioning: false
