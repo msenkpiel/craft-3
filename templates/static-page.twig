@@ -1,12 +1,33 @@
 {% extends "shared/base.twig" %}
 
-{% set entry = craft.entries().section('aboutPage').slug('static-pages').one() %}
+{% set entry = craft.entries().slug('about').one() %}
 
 {% block title %}
     {{ entry.title }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ entry.headline }}</h1>
-    <p>{{ entry.text }}</p>
+    <div class="row mt-5">
+    <div class="col-sm">
+        {% set menu = craft.entries().section('menu').slug('menu-about').one() %}
+        {% if menu.keyvisual|length %}
+        {% set hero = menu.keyvisual[0] %}
+        <div class="jumbotron text-white"
+             style="background: url({{ hero.getUrl('heroImage') }}) no-repeat center center; background-size: cover;">
+            {% else %}
+            <div class="jumbotron">
+                {% endif %}
+                <h1 class="display-4">Craft Entry::Single</h1>
+                <p class="lead">This page is an example of a single page.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-sm">
+            <h1>{{ entry.headline }}</h1>
+            <p>{{ entry.text }}</p>
+        </div>
+    </div>
+
 {% endblock %}

@@ -16,7 +16,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: d465b412-69a2-4578-9aa0-0f08638c4c65
-dateModified: 1583399072
+dateModified: 1583402703
 email:
   fromEmail: marco.senkpiel@gmail.com
   fromName: 'Craft Demo'
@@ -246,10 +246,20 @@ globalSets:
     handle: websiteSettings
     name: 'Website Settings'
 imageTransforms:
+  11256e62-1c02-437e-94b8-b3add9d948fa:
+    format: null
+    handle: heroImage
+    height: 500
+    interlace: none
+    mode: crop
+    name: 'Hero Image'
+    position: center-center
+    quality: null
+    width: 1500
   205ce0e0-b774-4d23-8803-e6aabf96b3c5:
     format: null
     handle: cropCenter
-    height: 400
+    height: 550
     interlace: none
     mode: crop
     name: 'Crop Center'
@@ -324,6 +334,9 @@ sections:
             tabs:
               -
                 fields:
+                  137a8142-4f23-43c3-9598-a1f17ffbe9b8:
+                    required: false
+                    sortOrder: 4
                   43acf3d1-4c55-4c7a-a678-bebbf34cd8ec:
                     required: false
                     sortOrder: 1
@@ -369,8 +382,18 @@ sections:
                   c90d10bd-eec8-4cba-bc75-2d4516fb4ed2:
                     required: false
                     sortOrder: 1
-                name: 'Static Pages'
+                name: 'Playlist Data'
                 sortOrder: 1
+              -
+                fields:
+                  137a8142-4f23-43c3-9598-a1f17ffbe9b8:
+                    required: false
+                    sortOrder: 1
+                  d26cd4c0-2ee7-4f6d-8ede-9d2440c5cd16:
+                    required: false
+                    sortOrder: 2
+                name: Image
+                sortOrder: 2
         handle: playlist
         hasTitleField: true
         name: Playlist
