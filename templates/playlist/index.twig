@@ -2,7 +2,7 @@
 
 
 {% block title %}
-    Blog
+    Playlists
 {% endblock %}
 
 {% block body %}
@@ -12,11 +12,23 @@
     {# Fetch the entries #}
     {% set entries = myEntryQuery.all() %}
 
-    {# Display the entries #}
-    {% for entry in entries %}
-        <article>
-            <h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
-            <a href="{{ entry.url }}">Continue reading</a>
-        </article>
-    {% endfor %}
+    <div class="row mt-5">
+        <div class="col-sm">
+
+        {# Display the entries #}
+        {% for entry in entries %}
+
+            <div class="card text-center mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ entry.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Playlist</h6>
+                    <p class="card-text">{{ entry.text }}</p>
+                    <a href="{{ entry.url }}" class="btn btn-primary">Open Playlist</a>
+                </div>
+            </div>
+
+        {% endfor %}
+
+        </div>
+    </div>
 {% endblock %}
