@@ -13,10 +13,11 @@
     {% set entries = myEntryQuery.all() %}
 
     <div class="row mt-5">
-        <div class="col-sm">
+
 
         {# Display the entries #}
         {% for entry in entries %}
+        <div class="col-sm-4">
             <div class="card text-center mb-4">
                 <div class="card-body">
                     <h5 class="card-title">{{ entry.title }}</h5>
@@ -25,8 +26,9 @@
                     <a href="{{ entry.url }}" class="btn btn-primary">Open Playlist</a>
                 </div>
             </div>
+        </div>
         {% endfor %}
 
-        </div>
+
     </div>
 {% endblock %}
