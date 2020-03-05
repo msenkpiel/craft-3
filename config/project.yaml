@@ -16,7 +16,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: d465b412-69a2-4578-9aa0-0f08638c4c65
-dateModified: 1583325344
+dateModified: 1583399072
 email:
   fromEmail: marco.senkpiel@gmail.com
   fromName: 'Craft Demo'
@@ -146,6 +146,52 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  cb92db48-a97c-4004-a0ac-b0f8456b33e3:
+    contentColumnType: string
+    fieldGroup: 808d891a-7c38-4cdc-b10f-06b46ec0df87
+    handle: target
+    instructions: ''
+    name: Target
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Blank
+            -
+              - value
+              - _blank
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Self
+            -
+              - value
+              - _self
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Top
+            -
+              - value
+              - _top
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   d26cd4c0-2ee7-4f6d-8ede-9d2440c5cd16:
     contentColumnType: string
     fieldGroup: b8a78c5e-694b-4073-a09d-6c6d1c92feaa
@@ -284,6 +330,9 @@ sections:
                   c780a0cb-f712-44bc-a475-bbfbde70f524:
                     required: false
                     sortOrder: 2
+                  cb92db48-a97c-4004-a0ac-b0f8456b33e3:
+                    required: false
+                    sortOrder: 3
                 name: Menu
                 sortOrder: 1
         handle: menu

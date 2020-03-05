@@ -30,7 +30,7 @@
                                  {% if link.relatedEntry|length %}
                                      <a class="nav-item nav-link" href="{{ link.relatedEntry[0].url }}">{{ link.title }}</a>
                                  {% else %}
-                                     <a class="nav-item nav-link" href="{{ link.customUrl }}">{{ link.title }}</a>
+                                     <a class="nav-item nav-link" href="{{ link.customUrl }}" target="{{ link.target }}">{{ link.title }}</a>
                                  {% endif %}
                              {% endnav %}
                          </div>
