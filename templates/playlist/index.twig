@@ -35,7 +35,7 @@
                 <div class="card text-center mb-4">
                     {% if entry.keyvisual|length %}
                         {% set image = entry.keyvisual[0] %}
-                        <img class="card-img-top" src="{{ image.getUrl('cropCenter') }}">
+                        <a href="{{ entry.url }}"><img class="card-img-top" src="{{ image.getUrl('cropCenter') }}"></a>
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ entry.title }}</h5>
