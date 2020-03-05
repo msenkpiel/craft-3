@@ -13,8 +13,6 @@
     {% set entries = myEntryQuery.all() %}
 
     <div class="row mt-5">
-
-
         {# Display the entries #}
         {% for entry in entries %}
         <div class="col-sm-4">
@@ -28,7 +26,5 @@
             </div>
         </div>
         {% endfor %}
-
-
     </div>
 {% endblock %}
