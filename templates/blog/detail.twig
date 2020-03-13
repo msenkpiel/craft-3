@@ -1,31 +1,50 @@
 {% extends "shared/base.twig" %}
 
-{# Get the requested blogpost slug from the URL #}
+{# Get the requested record slug from the URL #}
 {% set requestedSlug = craft.app.request.getSegment(2) %}
 
-{# Fetch the blogpost with that slug #}
-{% set blogpost = craft.entries().slug(requestedSlug|literal).one() %}
+{# Fetch the record with that slug #}
+{% set record = craft.entries().slug(requestedSlug|literal).one() %}
 
 
 {% block title %}
-    {% if blogpost %}
-        {{ blogpost.title }}
+    {% if record %}
+        {{ record.title }}
     {% else %}
         Not Found
     {% endif %}
 {% endblock %}
 
 {% block body %}
-    {% if blogpost %}
-        <small>{{ blogpost.title }}</small>
-        <h1>{{ blogpost.headline }}</h1>
+    {% if record %}
 
-        {% if blogpost.keyvisual|length %}
-            {% set image = blogpost.keyvisual[0] %}
-            <img class="thumb" src="{{ image.getUrl('cropCenter') }}">
-        {% endif %}
+        <small>Post Type:  {{ record.type }}</small>
+        <h1>{{ record.title }}</h1>
 
-        <p>{{ blogpost.text|nl2br }}</p>
+        {% for areaBlock in record.blogMatrix.all() %}
+
+            {% switch areaBlock.type %}
+            {% case "text" %}
+                {{ areaBlock.text|markdown }}
+
+            {% case "image" %}
+                {% if areaBlock.image|length %}
+                    {{ areaBlock.image[0].getImg('galleryFullsize') }}
+                {% endif %}
+
+            {% case "imageGallery" %}
+                {% set gallery = areaBlock.imageGallery.all() %}
+                {% for img in gallery %}
+                    <a href="{{ img.getUrl('galleryFullsize') }}" target="_blank"><img
+                                src="{{ img.getUrl('galleryThumbnail') }}" width="125" height="125" alt=""></a>
+                {% endfor %}
+
+            {% default %}
+                <div class="alert alert-danger">{{ areaBlock.type }} :: BLOCK TEMPLATE NOT FOUND</div>
+            {% endswitch %}
+
+        {% endfor %}
+
     {% else %}
         Not Found
     {% endif %}

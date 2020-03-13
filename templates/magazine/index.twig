@@ -1,0 +1,32 @@
+{% extends "shared/base.twig" %}
+
+{% block title %}
+    Magazine
+{% endblock %}
+
+{% block body %}
+    {% for matrixBlock in craft.matrixBlocks().field('magazineMatrix').all() %}
+
+        {{ matrixBlock.type }}
+
+
+        {% switch matrixBlock.type %}
+
+        {% case "contentBlock" %}
+
+            {{ matrixBlock.textContent|markdown }}
+
+        {% case "designBlock" %}
+
+            {{ matrixBlock.keyvisual[0].getImg() }}
+
+        {% default %}
+
+            <p>A font walks into a bar.</p>
+            <p>The bartender says, “Hey, we don’t serve your type in here!”</p>
+
+        {% endswitch %}
+
+
+    {% endfor %}
+{% endblock %}
