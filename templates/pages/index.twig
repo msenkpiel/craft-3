@@ -1,0 +1,7 @@
+{# https://craftcms.stackexchange.com/questions/24024/singles-or-routes-solution #}
+
+{% extends [
+    'pages/_custom/' ~ entry.slug ~ '.twig',
+    'pages/_type.' ~ entry.type ~ '.twig',
+    'pages/_default.twig'
+    ] %}
