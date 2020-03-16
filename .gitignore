@@ -1,0 +1,14 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+
+/.env.example
+/craft
+/craft.bat
+
+/config/*
+!/config/project.yaml
+/storage/*
+/modules/*
+/web/*
