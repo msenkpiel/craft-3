@@ -21,12 +21,6 @@ categoryGroups:
       maxLevels: null
       uid: 26e9ff7e-d77b-4d61-9b05-08f3d0e52de3
   ae0b6c1a-e124-4baa-a4e4-a7708487dbaf:
-    fieldLayouts:
-      9f6a4f05-cc99-4f00-a86a-7b21a545d5d2:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
     handle: blogCategories
     name: 'Blog Categories'
     siteSettings:
@@ -37,7 +31,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: b2c7d6d4-aed3-40b9-b8f3-e25a0e62c679
-dateModified: 1584013206
+dateModified: 1584356712
 email:
   fromEmail: marco.senkpiel@gmail.com
   fromName: 'Craft Demo'
@@ -322,6 +316,9 @@ globalSets:
             sortOrder: 1
     handle: websiteSettings
     name: 'Website Settings'
+  d1212031-3aea-457d-a80d-65d92bc8931c:
+    handle: siteName
+    name: 'Site Name'
 imageTransforms:
   11256e62-1c02-437e-94b8-b3add9d948fa:
     format: null
@@ -692,13 +689,14 @@ sections:
         titleLabel: Title
     handle: navigation
     name: Navigation
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
         enabledByDefault: true
         hasUrls: false
         template: null
-        uriFormat: ''
+        uriFormat: null
     structure:
       maxLevels: 2
       uid: 1ba46cef-f8bb-453d-a2f5-a37ae5bd5148
@@ -710,9 +708,6 @@ sections:
         fieldLayouts:
           6ef66121-bcb2-4750-a6a9-ce28944adbcb:
             tabs:
-              -
-                name: Content
-                sortOrder: 1
               -
                 fields:
                   d26cd4c0-2ee7-4f6d-8ede-9d2440c5cd16:
@@ -758,6 +753,7 @@ sections:
         titleLabel: 'Blog Quote Title'
     handle: blog
     name: Blog
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -788,6 +784,7 @@ sections:
         titleLabel: 'Page Title'
     handle: singlePrivacy
     name: 'Single Privacy'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -818,6 +815,7 @@ sections:
         titleLabel: 'Page Title'
     handle: singleContact
     name: 'Single Contact'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -944,6 +942,7 @@ sections:
         titleLabel: 'Page Title'
     handle: pages
     name: Pages
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -967,6 +966,7 @@ sections:
         titleLabel: Title
     handle: work
     name: Work
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -997,6 +997,7 @@ sections:
         titleLabel: 'Page Title'
     handle: singleAbout
     name: 'Single About'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -1027,6 +1028,7 @@ sections:
         titleLabel: 'Page Title'
     handle: singleImprint
     name: 'Single Imprint'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
@@ -1057,6 +1059,7 @@ sections:
         titleLabel: ''
     handle: singleHome
     name: 'Single Home'
+    previewTargets: null
     propagationMethod: all
     siteSettings:
       e528f7ed-3e74-4eaf-bfd8-6c332a6e9a70:
