@@ -1,7 +1,8 @@
 {
   "require": {
-    "adigital/cookie-consent-banner": "1.2.5",
+    "adigital/cookie-consent-banner": "^1.2",
     "craftcms/cms": "3.4.9",
+    "fatfish/navigation": "^1.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

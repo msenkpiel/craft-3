@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "301f3715e2e6b2402c7a3d1f7d3d39c2",
+    "content-hash": "5bba24f8609a8f3239ecf6d1087dcbc1",
     "packages": [
         {
             "name": "adigital/cookie-consent-banner",
@@ -910,6 +910,60 @@
                 "html"
             ],
             "time": "2019-10-28T03:44:26+00:00"
+        },
+        {
+            "name": "fatfish/navigation",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fatfishdigital/Navigation.git",
+                "reference": "584223e5d75d8b91b2d0d70f698fced5b2fb5323"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fatfishdigital/Navigation/zipball/584223e5d75d8b91b2d0d70f698fced5b2fb5323",
+                "reference": "584223e5d75d8b91b2d0d70f698fced5b2fb5323",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CraftNavigation",
+                "handle": "craftnavigation",
+                "hasCpSettings": true,
+                "hasCpSection": true,
+                "changelogUrl": "https://github.com/fatfishdigital/navigation/master/CHANGELOG.md",
+                "components": {
+                    "navigationService": "fatfish\\navigation\\services\\NavigationService"
+                },
+                "class": "fatfish\\navigation\\Navigation"
+            },
+            "autoload": {
+                "psr-4": {
+                    "fatfish\\navigation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fatfish",
+                    "homepage": "https://fatfish.com.au"
+                }
+            ],
+            "description": "Craft navigation for the website.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "navigation"
+            ],
+            "time": "2020-03-05T01:24:45+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
