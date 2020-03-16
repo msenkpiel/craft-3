@@ -5,16 +5,38 @@
 {% block baseTitle %}{{ data.title }}{% endblock %}
 
 {% block baseBody %}
-    <div class="row mt-5">
-        <div class="col-sm">
 
-            <div class="jumbotron">
-                <h1 class="display-4">{{ globalSet.websiteTitle }}</h1>
-                <p class="lead">This is a simple craft cms demo site.</p>
-                <hr class="my-4">
-                <p>Here are a few playlists from my profile.</p>
-                <a class="btn btn-primary btn-secondary btn-lg" href="/playlists" role="button">Show Playlists</a>
+    {% for contentBlock in data.contentBlocks.all() %}
+
+        {% switch contentBlock.type %}
+        {% case "text" %}
+            <div class="row mt-5">
+                <div class="col-sm">
+                    {{ contentBlock.text|markdown }}
+                </div>
             </div>
-        </div>
-    </div>
+
+        {% case "image" %}
+            {% if contentBlock.image|length %}
+                <div class="row mt-5">
+                    <div class="col-sm text-center">
+                        <img src="{{ contentBlock.image[0].getUrl('galleryFullsize') }}" width="500" height="500" alt="">
+                    </div>
+                </div>
+            {% endif %}
+
+        {% case "imageGallery" %}
+            {% set gallery = contentBlock.imageGallery.all() %}
+            {% for img in gallery %}
+                <a href="{{ img.getUrl('galleryFullsize') }}" target="_blank"><img
+                            src="{{ img.getUrl('galleryThumbnail') }}" width="125" height="125" alt=""></a>
+            {% endfor %}
+
+        {% default %}
+            <div class="alert alert-danger">{{ contentBlock.type }} :: BLOCK TEMPLATE NOT FOUND</div>
+        {% endswitch %}
+
+
+    {% endfor %}
+    
 {% endblock %}
